@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        color: #fff;
+
+    }
+
+    .container input {
+        width: 250px;
+        height: 25px;
+        font-weight: bold;
+
+    }
+
+
+    .container h2{
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 5rem;
+        color: green;
+        font-weight: bold;
+    }
+
+    .container h1{
+
+        text-align: center;
+        margin-bottom: 5rem;
+        font-size: 36px;
+    }
+
+    .container button {
+        width: 80px;
+        height: 30px;
+        font-weight: bold;
+        margin: 0 15px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+
+
+    <div class="container">
+
+        <h2> Increment And Decrement </h2>
+
+        <h1 id="number">0</h1>
+
+        <div class="box">
+            <input type="number" id="inputvala">
+            <button onclick="Increment()" id="increment">Increment</button>
+            <button onclick="Decrement()" id="Decrement">Decrement  </button>
+            <button onclick="reset()" id="reset">Reset</button>
+            <button onclick="add()" id="add">Add</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+
+        let target = document.getElementById("inputvala")
+        let addNewValue = document.getElementById("number")
+
+        // let btn=document.getElementById("Increment")
+        // let btn1=document.getElementById("Decrement")
+        // let btn2=document.getElementById("add")
+
+
+        function Increment() {
+
+            addNewValue.innerHTML++
+        }
+
+        function Decrement() {
+            if (addNewValue.innerHTML >= 1) {
+                addNewValue.innerHTML--
+            }
+            else {
+                alert(" Nagative value not allowed")
+            }
+        }
+
+        function reset() {
+            addNewValue.innerHTML = 0
+            target.value = 0
+        }
+
+        function add() {
+            addNewValue.innerHTML = target.value
+        }
+
+
+    </script>
+</body>
+
+</html>
